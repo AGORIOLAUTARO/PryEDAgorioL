@@ -16,5 +16,27 @@ namespace PryEDAgorioL
         {
             InitializeComponent();
         }
+
+        private void btnGrabar_Click(object sender, EventArgs e)
+        {
+            clsArchivo x = new clsArchivo();
+            x.Grabar (txtNombre.Text);
+            MessageBox.Show("EL DATO HA SIDO GRABADO CORRECTAMENTE");
+            txtNombre.Text = "";
+
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNombre.Text == "")
+            {
+                btnGrabar.Enabled = false;
+            }
+            else
+            {
+                btnGrabar.Enabled = true;
+
+            }
+        }
     }
 }
