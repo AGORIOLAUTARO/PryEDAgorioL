@@ -20,8 +20,9 @@ namespace PryEDAgorioL
         private void btnGrabar_Click(object sender, EventArgs e)
         {
             clsArchivo x = new clsArchivo();
+            x.NomArchi= ("Colores.csv");
             x.Grabar (txtNombre.Text);
-            MessageBox.Show("EL DATO HA SIDO GRABADO CORRECTAMENTE");
+            x.Recorrer(lstColores);
             txtNombre.Text = "";
 
         }

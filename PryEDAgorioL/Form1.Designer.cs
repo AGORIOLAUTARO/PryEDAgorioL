@@ -115,12 +115,14 @@
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clientesToolStripMenuItem.Text = "Clientes...";
+            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // alumnosToolStripMenuItem
             // 
             this.alumnosToolStripMenuItem.Name = "alumnosToolStripMenuItem";
             this.alumnosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.alumnosToolStripMenuItem.Text = "Alumnos...";
+            this.alumnosToolStripMenuItem.Click += new System.EventHandler(this.alumnosToolStripMenuItem_Click);
             // 
             // estructurasLinealesToolStripMenuItem
             // 
@@ -169,13 +171,13 @@
             // arbolToolStripMenuItem
             // 
             this.arbolToolStripMenuItem.Name = "arbolToolStripMenuItem";
-            this.arbolToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.arbolToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.arbolToolStripMenuItem.Text = "Arbol";
             // 
             // grafoToolStripMenuItem
             // 
             this.grafoToolStripMenuItem.Name = "grafoToolStripMenuItem";
-            this.grafoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.grafoToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.grafoToolStripMenuItem.Text = "Grafo";
             // 
             // Form1

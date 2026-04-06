@@ -41,5 +41,17 @@ namespace PryEDAgorioL
             vent.ShowDialog();
 
         }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmClientes vent = new frmClientes();
+            vent.ShowDialog();
+        }
+
+        private void alumnosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAlumnos vent = new frmAlumnos(); 
+            vent.ShowDialog();
+        }
     }
 }

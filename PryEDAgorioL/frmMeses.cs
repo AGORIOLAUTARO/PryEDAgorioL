@@ -16,5 +16,15 @@ namespace PryEDAgorioL
         {
             InitializeComponent();
         }
+
+        private void btnGrabarMeses_Click(object sender, EventArgs e)
+        {
+            clsArchivo x = new clsArchivo();
+            x.NomArchi = "Meses.csv";
+            x.Grabar(txtMeses.Text);
+            x.Recorrer(lstMeses);
+
+            txtMeses.Text = "";
+        }
     }
 }
