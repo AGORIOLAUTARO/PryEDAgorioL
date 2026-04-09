@@ -16,5 +16,12 @@ namespace PryEDAgorioL
         {
             InitializeComponent();
         }
+
+        private void btnGrabar_Click(object sender, EventArgs e)
+        {
+            clsArchivo x = new clsArchivo();
+            x.NomArchi = "Clientes.csv";
+            x.Grabar(txtCodigo.Text, txtNombre.Text, txtDeuda.Text);
+        }
     }
 }

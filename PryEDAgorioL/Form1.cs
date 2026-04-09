@@ -53,5 +53,11 @@ namespace PryEDAgorioL
             frmAlumnos vent = new frmAlumnos(); 
             vent.ShowDialog();
         }
+
+        private void carrerasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCarreras vent = new frmCarreras();
+            vent.ShowDialog();
+        }
     }
 }

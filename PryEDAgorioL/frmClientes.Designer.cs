@@ -98,6 +98,7 @@
             this.btnGrabar.TabIndex = 6;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
             // dgvClientes
             // 
@@ -106,7 +107,7 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dgvClientes.Location = new System.Drawing.Point(52, 288);
+            this.dgvClientes.Location = new System.Drawing.Point(38, 283);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.Size = new System.Drawing.Size(343, 150);
             this.dgvClientes.TabIndex = 7;
@@ -140,6 +141,7 @@
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.lblCodigo);
             this.Name = "frmClientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmClientes";
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.ResumeLayout(false);
