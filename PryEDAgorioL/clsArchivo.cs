@@ -47,7 +47,6 @@ namespace PryEDAgorioL
             AD.WriteLine(dato3);//Escribir el contenido e la variable + ENTER 
             AD.Close();
 
-
         }
 
          
@@ -64,28 +63,30 @@ namespace PryEDAgorioL
             }
             AD.Close();
         } //Instancio una sobrecarga pero con combo box y data grid view
-        public void Recorrer(ComboBox cmbDatos)
+        public void Recorrer(ComboBox cmb)
         {
-
-            cmbDatos.Items.Clear();
             String DatoLeido = "";
+            cmb.Items.Clear();
             StreamReader AD = new StreamReader(NomArchi);
+            DatoLeido = AD.ReadLine() ; 
             while (DatoLeido != null) 
             {
-                cmbDatos.Items.Add(DatoLeido);
+                cmb.Items.Add(DatoLeido);
                 DatoLeido = AD.ReadLine();
             }
+            cmb.SelectedIndex = 0;
             AD.Close();
         }
-        public void Recorrer (DataGridView dgvDatos)
+        public void Recorrer (DataGridView Grilla)
         {
-
-            dgvDatos.Rows.Clear();
-            String DatoLeido = "";
+            String DatoLeido;
+            Grilla.Rows.Clear();
+            
             StreamReader AD = new StreamReader(NomArchi);
+            DatoLeido = AD.ReadLine();
             while (DatoLeido != null) 
             {
-                dgvDatos.Rows.Add(DatoLeido);
+                Grilla.Rows.Add(DatoLeido.Split(';'));
                 DatoLeido = AD.ReadLine();
             }
             AD.Close();

@@ -66,7 +66,7 @@
             this.lstCarreras.FormattingEnabled = true;
             this.lstCarreras.Location = new System.Drawing.Point(75, 183);
             this.lstCarreras.Name = "lstCarreras";
-            this.lstCarreras.Size = new System.Drawing.Size(209, 95);
+            this.lstCarreras.Size = new System.Drawing.Size(218, 147);
             this.lstCarreras.TabIndex = 3;
             // 
             // btnLimpiar
