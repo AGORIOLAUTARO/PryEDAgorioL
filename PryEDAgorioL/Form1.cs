@@ -59,5 +59,11 @@ namespace PryEDAgorioL
             frmCarreras vent = new frmCarreras();
             vent.ShowDialog();
         }
+
+        private void colaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCola vent = new frmCola();
+            vent.ShowDialog();
+        }
     }
 }

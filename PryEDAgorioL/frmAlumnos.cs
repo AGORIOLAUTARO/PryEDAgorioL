@@ -21,8 +21,13 @@ namespace PryEDAgorioL
         {
             clsArchivo x = new clsArchivo();
             x.NomArchi = "Carreras.csv";
-            x.Recorrer(cmbCarrera);
+            if (File.Exists(x.NomArchi)) x.Recorrer(cmbCarrera);
             if (File.Exists(x.NomArchi)) x.Recorrer(dgvAlumnos);
+            btnGrabar.Enabled = false;
+
+            clsArchivo y = new clsArchivo();
+            y.NomArchi = "Alumnos.csv";
+            if (File.Exists(y.NomArchi)) y.Recorrer(dgvAlumnos);
             btnGrabar.Enabled = false;
         }
 
@@ -43,6 +48,30 @@ namespace PryEDAgorioL
             txtCodigo.Text = "";
             txtNombre.Text = "";
             cmbCarrera.Text = "";
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text != "" && txtNombre.Text != "" && cmbCarrera.Text != "")
+            {
+                btnGrabar.Enabled = true;
+            }
+            else
+            {
+                btnGrabar.Enabled = false;
+            }
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text != "" && txtNombre.Text != "" && cmbCarrera.Text != "")
+            {
+                btnGrabar.Enabled = true;
+            }
+            else
+            {
+                btnGrabar.Enabled = false;
+            }
         }
     }
 }

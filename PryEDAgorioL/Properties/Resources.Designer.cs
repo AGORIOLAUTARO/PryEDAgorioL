@@ -69,5 +69,15 @@ namespace PryEDAgorioL.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap la_concha_de_tu_madre {
+            get {
+                object obj = ResourceManager.GetObject("la concha de tu madre", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

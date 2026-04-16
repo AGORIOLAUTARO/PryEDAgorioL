@@ -76,6 +76,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(100, 20);
             this.txtCodigo.TabIndex = 3;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // txtNombre
             // 
@@ -83,6 +84,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 4;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // btnGrabar
             // 
@@ -103,7 +105,8 @@
             this.Column3});
             this.dgvAlumnos.Location = new System.Drawing.Point(48, 260);
             this.dgvAlumnos.Name = "dgvAlumnos";
-            this.dgvAlumnos.Size = new System.Drawing.Size(321, 152);
+            this.dgvAlumnos.RowHeadersVisible = false;
+            this.dgvAlumnos.Size = new System.Drawing.Size(305, 152);
             this.dgvAlumnos.TabIndex = 7;
             // 
             // Column1
