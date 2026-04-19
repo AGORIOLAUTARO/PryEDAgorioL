@@ -151,5 +151,20 @@
   <ItemGroup>
     <None Include="Resources\la concha de tu madre.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2026-04-19 at 20.14.02.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2026-04-19 at 20.14.021.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foto cv.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foto cv1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foto cv2.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
