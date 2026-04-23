@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace PryEDAgorioL
 {
@@ -23,18 +24,18 @@ namespace PryEDAgorioL
             set { ult = value; }
         }
 
-        public void Agrega (clsNodo nuevo)
-        { 
-                if (Primero==null)
-                {
+        public void Agregar(clsNodo nuevo)
+        {
+            if (Primero == null)
+            {
                 Primero = nuevo;
-                    Ultimo = nuevo;
-                }
-                else
-                {
-                    Ultimo.Siguiente = nuevo;
-                    Ultimo = nuevo;
-                }
+                Ultimo = nuevo;
+            }
+            else
+            {
+                Ultimo.Siguiente = nuevo;
+                Ultimo = nuevo;
+            }
         }
 
         public void Eliminar()
@@ -52,7 +53,7 @@ namespace PryEDAgorioL
 
         public void Recorrer(DataGridView Grilla)
         {
-           clsNodo Aux = Primero;
+            clsNodo Aux = Primero;
             Grilla.Rows.Clear();
             while (Aux != null)
             {
@@ -81,9 +82,27 @@ namespace PryEDAgorioL
             }
         }
 
+        public void Recorrer(String NombreArchivo)
+        {
+            clsNodo Aux = Primero;
+            StreamWriter AD = new StreamWriter(NombreArchivo);
+            AD.WriteLine("Lista de espera\n");
+            AD.WriteLine("Código;Nombre;Trámite");
+            while (Aux != null)
+            {
+                AD.Write(Aux.Codigo);
+                AD.Write(";");
+                AD.Write(Aux.Nombre);
+                AD.Write(";");
+                AD.WriteLine(Aux.Tramite);
+                Aux = Aux.Siguiente;
+            }
+            AD.Close();
 
 
 
 
+
+        }
     }
 }

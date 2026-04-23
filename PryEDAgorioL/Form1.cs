@@ -65,5 +65,23 @@ namespace PryEDAgorioL
             frmCola vent = new frmCola();
             vent.ShowDialog();
         }
+
+        private void pilaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPila vent = new frmPila();
+            vent.ShowDialog();
+        }
+
+        private void listaSimpleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListaSimple vent = new frmListaSimple();
+            vent.ShowDialog();
+        }
+
+        private void listaDobleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListaDoble vent = new frmListaDoble();
+            vent.ShowDialog();
+        }
     }
 }
