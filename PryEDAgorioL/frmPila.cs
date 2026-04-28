@@ -16,5 +16,50 @@ namespace PryEDAgorioL
         {
             InitializeComponent();
         }
+        clsPila objPila = new clsPila();
+        private void frmPila_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            clsNodo x = new clsNodo();
+            x.Codigo = Convert.ToInt32(txtCodigo.Text);
+            x.Nombre = txtNombre.Text;
+            x.Tramite = txtTramite.Text;
+
+            objPila.Agregar(x);
+            objPila.Recorrer(dgvPila);
+            objPila.Recorrer(lstPila);
+            objPila.Recorrer("Pila.csv");
+
+            txtCodigo.Text = "";
+            txtNombre.Text = "";
+            txtTramite.Text = "";
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (objPila.Primero != null)
+            {
+                lblCodig.Text = objPila.Primero.Codigo.ToString();
+                lblNombr.Text = objPila.Primero.Nombre;
+                lblTramit.Text = objPila.Primero.Tramite;
+
+
+
+                objPila.Eliminar();
+                objPila.Recorrer(dgvPila);
+                objPila.Recorrer(lstPila);
+                objPila.Recorrer("Pila.csv");
+            }
+            else
+            {
+                lblCodig.Text = "";
+                lblNombr.Text = "";
+                lblTramit.Text = "";
+            }
+        }
     }
 }
