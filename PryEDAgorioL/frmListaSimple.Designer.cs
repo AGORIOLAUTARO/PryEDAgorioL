@@ -35,6 +35,7 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gpbElementoEliminado = new System.Windows.Forms.GroupBox();
+            this.cmbListaSimple = new System.Windows.Forms.ComboBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lblCodigoEliminado = new System.Windows.Forms.Label();
             this.gpbListaSimple = new System.Windows.Forms.GroupBox();
@@ -45,7 +46,6 @@
             this.lblTramite = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.cmbListaSimple = new System.Windows.Forms.ComboBox();
             this.pbPila = new System.Windows.Forms.PictureBox();
             this.gpbGrilla.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaSimple)).BeginInit();
@@ -86,6 +86,7 @@
             this.dgvListaSimple.RowHeadersWidth = 51;
             this.dgvListaSimple.Size = new System.Drawing.Size(380, 170);
             this.dgvListaSimple.TabIndex = 8;
+            this.dgvListaSimple.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaSimple_CellContentClick);
             // 
             // Column1
             // 
@@ -120,6 +121,14 @@
             this.gpbElementoEliminado.TabStop = false;
             this.gpbElementoEliminado.Text = "Elemento a eliminar";
             // 
+            // cmbListaSimple
+            // 
+            this.cmbListaSimple.FormattingEnabled = true;
+            this.cmbListaSimple.Location = new System.Drawing.Point(73, 38);
+            this.cmbListaSimple.Name = "cmbListaSimple";
+            this.cmbListaSimple.Size = new System.Drawing.Size(121, 21);
+            this.cmbListaSimple.TabIndex = 8;
+            // 
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(41, 140);
@@ -128,11 +137,12 @@
             this.btnEliminar.TabIndex = 7;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // lblCodigoEliminado
             // 
             this.lblCodigoEliminado.AutoSize = true;
-            this.lblCodigoEliminado.Location = new System.Drawing.Point(20, 103);
+            this.lblCodigoEliminado.Location = new System.Drawing.Point(20, 38);
             this.lblCodigoEliminado.Name = "lblCodigoEliminado";
             this.lblCodigoEliminado.Size = new System.Drawing.Size(43, 13);
             this.lblCodigoEliminado.TabIndex = 1;
@@ -183,6 +193,7 @@
             this.btnAgregar.TabIndex = 6;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // lblTramite
             // 
@@ -211,14 +222,6 @@
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "Código:";
             // 
-            // cmbListaSimple
-            // 
-            this.cmbListaSimple.FormattingEnabled = true;
-            this.cmbListaSimple.Location = new System.Drawing.Point(69, 99);
-            this.cmbListaSimple.Name = "cmbListaSimple";
-            this.cmbListaSimple.Size = new System.Drawing.Size(121, 21);
-            this.cmbListaSimple.TabIndex = 8;
-            // 
             // pbPila
             // 
             this.pbPila.Image = global::PryEDAgorioL.Properties.Resources.lista_simplemente_ligada;
@@ -241,6 +244,7 @@
             this.Name = "frmListaSimple";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmListaSimple";
+            this.Load += new System.EventHandler(this.frmListaSimple_Load);
             this.gpbGrilla.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaSimple)).EndInit();
             this.gpbElementoEliminado.ResumeLayout(false);

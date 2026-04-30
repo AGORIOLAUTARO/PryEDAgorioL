@@ -59,5 +59,10 @@ namespace PryEDAgorioL
 
             }
         }
+
+        private void frmCola_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
