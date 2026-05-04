@@ -13,7 +13,8 @@ namespace PryEDAgorioL
         private String Nom;
         private String Tra;
         private clsNodo Sig;
-        
+        private clsNodo Ant;
+
 
         //propiedades del nodo
         public Int32 Codigo
@@ -38,6 +39,12 @@ namespace PryEDAgorioL
         {
             get { return Sig; }
             set { Sig = value; }
+        }
+
+        public clsNodo Anterior
+        {
+            get { return Ant; }
+            set { Ant = value; }
         }
     }
 

@@ -1,54 +1,69 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
 using System.Windows.Forms;
 
 namespace PryEDAgorioL
 {
-    internal class clsListaSimple
+    internal class clsListaDoble
     {
         private clsNodo pri;
-
+        private clsNodo ult;
 
         public clsNodo Primero
-        { 
-          get { return pri; }
-          set { pri = value; }  
+        {
+            get { return pri; }
+            set { pri = value; }
         }
 
-        public void Agregar (clsNodo Nuevo)
+        public clsNodo Ultimo
+        {
+            get { return ult; }
+            set { ult = value; }
+        } 
+
+        public void Agregar (clsNodo Nvo)
         {
             if (Primero == null)
             {
-                Primero = Nuevo;
+                Primero = Nvo;
+                Ultimo = Nvo;
             }
             else
             {
-                if(Nuevo.Codigo <= Primero.Codigo)
+               if(Nvo.Codigo < Primero.Codigo)
                 {
-                    Nuevo.Siguiente = Primero;
-                    Primero = Nuevo;
+                    Nvo.Siguiente = Primero;
+                    Primero.Anterior = Nvo;
+                    Primero = Nvo;
                 }
-                else
-                {
-                    clsNodo aux = Primero;
-                    clsNodo ant = Primero;
-                    while (aux.Codigo < Nuevo.Codigo)
+               else                {
+                   if(Nvo.Codigo > Ultimo.Codigo)
                     {
-                        ant = aux;
-                        aux = aux.Siguiente;
-                        if (aux == null) break;
+                        Ultimo.Siguiente = Nvo;
+                        Nvo.Anterior = Ultimo;
+                        Ultimo = Nvo;
                     }
-                    ant.Siguiente = Nuevo;
-                    Nuevo.Siguiente = aux;
+                   else
+                    {
+                        clsNodo Aux = Primero;
+                        clsNodo Ant = Primero;
+                        while (Aux.Codigo < Nvo.Codigo)
+                        {                            
+                            Ant = Aux;
+                            Aux = Aux.Siguiente;
+                        }
+                        Ant.Siguiente = Nvo;
+                        Nvo.Siguiente = Aux;
+                        Aux.Anterior = Nvo;
+                        Nvo.Anterior = Ant;
+
+                    }
                 }
             }
-
-
-
         }
         public void Recorrer(DataGridView Grilla)
         {
@@ -92,7 +107,7 @@ namespace PryEDAgorioL
 
 
         }
-    
+
         public void Recorrer(ComboBox Lista)
         {
             clsNodo Aux = Primero;
@@ -104,26 +119,6 @@ namespace PryEDAgorioL
             }
         }
 
-        public void Eliminar (Int32 Codigo)
-        {
-            if (Primero.Codigo == Codigo)
-            {
-                Primero = Primero.Siguiente;
-            }
-            else
-            {
-                clsNodo aux1 = Primero;
-                clsNodo aux2 = Primero;
-                while (aux1.Codigo != Codigo)
-                {
-                    aux2 = aux1;
-                    aux1 = aux1.Siguiente;
-                }
-                aux2.Siguiente = aux1.Siguiente;
-            }
-        }
+
     }
-
-
 }
-

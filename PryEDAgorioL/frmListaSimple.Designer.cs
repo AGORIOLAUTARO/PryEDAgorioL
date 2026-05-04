@@ -128,6 +128,7 @@
             this.cmbListaSimple.Name = "cmbListaSimple";
             this.cmbListaSimple.Size = new System.Drawing.Size(121, 21);
             this.cmbListaSimple.TabIndex = 8;
+            this.cmbListaSimple.SelectedIndexChanged += new System.EventHandler(this.cmbListaSimple_SelectedIndexChanged);
             // 
             // btnEliminar
             // 

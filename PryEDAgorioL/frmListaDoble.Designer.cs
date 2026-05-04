@@ -35,7 +35,7 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gpbElementoEliminado = new System.Windows.Forms.GroupBox();
-            this.cmbListaSimple = new System.Windows.Forms.ComboBox();
+            this.cmbListaDoble = new System.Windows.Forms.ComboBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lblCodigoEliminado = new System.Windows.Forms.Label();
             this.gpbListaSimple = new System.Windows.Forms.GroupBox();
@@ -47,8 +47,8 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.gpbListarDatos = new System.Windows.Forms.GroupBox();
-            this.rbAscendente = new System.Windows.Forms.RadioButton();
             this.rbDescendente = new System.Windows.Forms.RadioButton();
+            this.rbAscendente = new System.Windows.Forms.RadioButton();
             this.pbPila = new System.Windows.Forms.PictureBox();
             this.gpbGrilla.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaDoble)).BeginInit();
@@ -114,7 +114,7 @@
             // 
             // gpbElementoEliminado
             // 
-            this.gpbElementoEliminado.Controls.Add(this.cmbListaSimple);
+            this.gpbElementoEliminado.Controls.Add(this.cmbListaDoble);
             this.gpbElementoEliminado.Controls.Add(this.btnEliminar);
             this.gpbElementoEliminado.Controls.Add(this.lblCodigoEliminado);
             this.gpbElementoEliminado.Location = new System.Drawing.Point(564, 12);
@@ -124,13 +124,13 @@
             this.gpbElementoEliminado.TabStop = false;
             this.gpbElementoEliminado.Text = "Elemento a eliminar";
             // 
-            // cmbListaSimple
+            // cmbListaDoble
             // 
-            this.cmbListaSimple.FormattingEnabled = true;
-            this.cmbListaSimple.Location = new System.Drawing.Point(68, 30);
-            this.cmbListaSimple.Name = "cmbListaSimple";
-            this.cmbListaSimple.Size = new System.Drawing.Size(121, 21);
-            this.cmbListaSimple.TabIndex = 8;
+            this.cmbListaDoble.FormattingEnabled = true;
+            this.cmbListaDoble.Location = new System.Drawing.Point(68, 30);
+            this.cmbListaDoble.Name = "cmbListaDoble";
+            this.cmbListaDoble.Size = new System.Drawing.Size(121, 21);
+            this.cmbListaDoble.TabIndex = 8;
             // 
             // btnEliminar
             // 
@@ -195,6 +195,7 @@
             this.btnAgregar.TabIndex = 6;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // lblTramite
             // 
@@ -234,17 +235,6 @@
             this.gpbListarDatos.TabStop = false;
             this.gpbListarDatos.Text = "Listar Datos";
             // 
-            // rbAscendente
-            // 
-            this.rbAscendente.AutoSize = true;
-            this.rbAscendente.Location = new System.Drawing.Point(49, 32);
-            this.rbAscendente.Name = "rbAscendente";
-            this.rbAscendente.Size = new System.Drawing.Size(82, 17);
-            this.rbAscendente.TabIndex = 0;
-            this.rbAscendente.TabStop = true;
-            this.rbAscendente.Text = "Ascendente";
-            this.rbAscendente.UseVisualStyleBackColor = true;
-            // 
             // rbDescendente
             // 
             this.rbDescendente.AutoSize = true;
@@ -255,6 +245,17 @@
             this.rbDescendente.TabStop = true;
             this.rbDescendente.Text = "Descendente";
             this.rbDescendente.UseVisualStyleBackColor = true;
+            // 
+            // rbAscendente
+            // 
+            this.rbAscendente.AutoSize = true;
+            this.rbAscendente.Location = new System.Drawing.Point(49, 32);
+            this.rbAscendente.Name = "rbAscendente";
+            this.rbAscendente.Size = new System.Drawing.Size(82, 17);
+            this.rbAscendente.TabIndex = 0;
+            this.rbAscendente.TabStop = true;
+            this.rbAscendente.Text = "Ascendente";
+            this.rbAscendente.UseVisualStyleBackColor = true;
             // 
             // pbPila
             // 
@@ -302,7 +303,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.GroupBox gpbElementoEliminado;
-        private System.Windows.Forms.ComboBox cmbListaSimple;
+        private System.Windows.Forms.ComboBox cmbListaDoble;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label lblCodigoEliminado;
         private System.Windows.Forms.GroupBox gpbListaSimple;

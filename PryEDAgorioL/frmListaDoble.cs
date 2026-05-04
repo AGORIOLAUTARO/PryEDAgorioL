@@ -16,5 +16,25 @@ namespace PryEDAgorioL
         {
             InitializeComponent();
         }
+        clsListaDoble ObjDoble = new clsListaDoble();
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            clsNodo x = new clsNodo();
+            x.Codigo = Convert.ToInt32(txtCodigo.Text);
+            x.Nombre = txtNombre.Text;
+            x.Tramite = txtTramite.Text;
+
+            ObjDoble.Agregar(x);    
+            ObjDoble.Recorrer(lstListaDoble);
+            ObjDoble.Recorrer(dgvListaDoble);
+            ObjDoble.Recorrer(cmbListaDoble);
+            ObjDoble.Recorrer ("ListaDoble.csv");
+
+            txtCodigo.Text = "";
+            txtNombre.Text = "";
+            txtTramite.Text = "";
+
+        }
     }
 }

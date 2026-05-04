@@ -49,7 +49,20 @@ namespace PryEDAgorioL
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-
+            if(objLista.Primero != null)
+            {
+                Int32 x = Convert.ToInt32(cmbListaSimple.Text);
+                objLista.Eliminar(x);
+                objLista.Recorrer(dgvListaSimple);
+                objLista.Recorrer(cmbListaSimple);
+                objLista.Recorrer(lstListaSimple);
+                objLista.Recorrer("ListaSimple.csv");
+            }
+            else
+            {
+                MessageBox.Show("La lista esta vacia");
+            }
+            btnEliminar.Enabled = false;
         }
         private void ValidarDatos()
         {
@@ -60,6 +73,18 @@ namespace PryEDAgorioL
             else
             {
                 btnAgregar.Enabled = false; 
+            }
+        }
+
+        private void cmbListaSimple_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbListaSimple.Text != "")
+            {
+                btnEliminar.Enabled= true;
+            }
+            else
+            {      
+                btnEliminar.Enabled = false;
             }
         }
     }
