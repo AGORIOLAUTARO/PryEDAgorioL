@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -119,6 +120,98 @@ namespace PryEDAgorioL
             }
         }
 
+        public void RecorrerDesc(DataGridView Grilla)
+        {
+            clsNodo Aux = Ultimo;
+            Grilla.Rows.Clear();
+            while (Aux != null)
+            {
+                Grilla.Rows.Add(Aux.Codigo, Aux.Nombre, Aux.Tramite);
+                Aux = Aux.Anterior;
+            }
+        }
 
-    }
-}
+        public void RecorrerDesc(ListBox Lista)
+        {
+            clsNodo Aux = Ultimo;
+            Lista.Items.Clear();
+            while (Aux != null)
+            {
+                Lista.Items.Add(Aux.Codigo);
+                Aux = Aux.Anterior;
+            }
+        }
+        public void RecorrerDesc(String NombreArchivo)
+        {
+            clsNodo Aux = Ultimo;
+            StreamWriter AD = new StreamWriter(NombreArchivo);
+            AD.WriteLine("Lista de espera\n");
+            AD.WriteLine("Código;Nombre;Trámite");
+            while (Aux != null)
+            {
+                AD.Write(Aux.Codigo);
+                AD.Write(";");
+                AD.Write(Aux.Nombre);
+                AD.Write(";");
+                AD.WriteLine(Aux.Tramite);
+                Aux = Aux.Anterior;
+            }
+            AD.Close();
+
+
+
+
+
+        }
+        public void RecorrerDesc(ComboBox Lista)
+        {
+            clsNodo Aux = Ultimo;
+            Lista.Items.Clear();
+            while (Aux != null)
+            {
+                Lista.Items.Add(Aux.Codigo);
+                Aux = Aux.Anterior;
+            }
+        }
+        public void Eliminar(Int32 Codigo)
+        {
+            if (Primero.Codigo == Codigo && Ultimo == Primero)
+            {
+                Primero = null;
+                Ultimo = null;
+            }
+            else
+            {
+                if (Primero.Codigo == Codigo)
+                {
+                    Primero = Primero.Siguiente;
+                    Primero.Anterior = null;
+                }
+                else
+                {
+                    if (Ultimo.Codigo == Codigo)
+                    {
+                        Ultimo = Ultimo.Anterior;
+                        Ultimo.Siguiente = null;
+                    }
+                    else
+                    {
+                        clsNodo Aux = Primero;
+                        clsNodo Ant = Primero;
+                        while (Aux.Codigo < Codigo)
+                        {
+                            Ant = Aux;
+                            Aux = Aux.Siguiente;
+                        }
+                        Aux = Aux.Siguiente;
+                        Ant.Siguiente = Aux;
+                        Aux.Anterior = Ant; 
+                    }
+                }
+            }
+            
+
+
+        } 
+}   }
+

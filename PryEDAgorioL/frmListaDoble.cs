@@ -36,5 +36,37 @@ namespace PryEDAgorioL
             txtTramite.Text = "";
 
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (ObjDoble.Primero != null)
+            {
+                Int32 x = Convert.ToInt32(cmbListaDoble.Text);
+                ObjDoble.Eliminar(x);
+                ObjDoble.Recorrer(lstListaDoble);
+                ObjDoble.Recorrer(dgvListaDoble);
+                ObjDoble.Recorrer(cmbListaDoble);
+                ObjDoble.Recorrer("ListaDoble.csv");
+            }
+        }
+
+        private void frmListaDoble_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbAscendente_CheckedChanged(object sender, EventArgs e)
+        {
+            ObjDoble.Recorrer(dgvListaDoble);
+            ObjDoble.Recorrer(cmbListaDoble);
+            ObjDoble.Recorrer(lstListaDoble);
+        }
+
+        private void rbDescendente_CheckedChanged(object sender, EventArgs e)
+        {
+            ObjDoble.RecorrerDesc(dgvListaDoble);
+            ObjDoble.RecorrerDesc(cmbListaDoble);
+            ObjDoble.RecorrerDesc(lstListaDoble);
+        }
     }
 }
