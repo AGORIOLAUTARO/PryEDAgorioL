@@ -22,10 +22,6 @@ namespace PryEDAgorioL
 
         }
 
-      
-         
-        
-
 
 
         public void Grabar (String Dato)

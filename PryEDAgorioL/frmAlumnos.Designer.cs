@@ -163,7 +163,7 @@
             this.Controls.Add(this.lblCodigo);
             this.Name = "frmAlumnos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmAlumnos";
+            this.Text = "Alumnos";
             this.Load += new System.EventHandler(this.frmAlumnos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).EndInit();
             this.ResumeLayout(false);

@@ -39,16 +39,17 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigo.Location = new System.Drawing.Point(100, 52);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(56, 18);
+            this.lblCodigo.Size = new System.Drawing.Size(59, 20);
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "Código";
             // 
@@ -58,24 +59,25 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(100, 20);
             this.txtCodigo.TabIndex = 1;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged_1);
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(100, 108);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(62, 18);
+            this.lblNombre.Size = new System.Drawing.Size(65, 20);
             this.lblNombre.TabIndex = 2;
             this.lblNombre.Text = "Nombre";
             // 
             // lblDeuda
             // 
             this.lblDeuda.AutoSize = true;
-            this.lblDeuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDeuda.Location = new System.Drawing.Point(100, 163);
             this.lblDeuda.Name = "lblDeuda";
-            this.lblDeuda.Size = new System.Drawing.Size(51, 18);
+            this.lblDeuda.Size = new System.Drawing.Size(57, 20);
             this.lblDeuda.TabIndex = 3;
             this.lblDeuda.Text = "Deuda";
             // 
@@ -85,6 +87,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 4;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged_1);
             // 
             // txtDeuda
             // 
@@ -92,13 +95,14 @@
             this.txtDeuda.Name = "txtDeuda";
             this.txtDeuda.Size = new System.Drawing.Size(100, 20);
             this.txtDeuda.TabIndex = 5;
+            this.txtDeuda.TextChanged += new System.EventHandler(this.txtDeuda_TextChanged_1);
             // 
             // btnGrabar
             // 
             this.btnGrabar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrabar.Location = new System.Drawing.Point(266, 228);
+            this.btnGrabar.Location = new System.Drawing.Point(232, 225);
             this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(75, 23);
+            this.btnGrabar.Size = new System.Drawing.Size(85, 36);
             this.btnGrabar.TabIndex = 6;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = true;
@@ -113,7 +117,8 @@
             this.Column3});
             this.dgvClientes.Location = new System.Drawing.Point(38, 283);
             this.dgvClientes.Name = "dgvClientes";
-            this.dgvClientes.Size = new System.Drawing.Size(343, 150);
+            this.dgvClientes.RowHeadersVisible = false;
+            this.dgvClientes.Size = new System.Drawing.Size(313, 150);
             this.dgvClientes.TabIndex = 7;
             // 
             // Column1
@@ -131,11 +136,23 @@
             this.Column3.HeaderText = "Deuda";
             this.Column3.Name = "Column3";
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.Location = new System.Drawing.Point(143, 225);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(83, 36);
+            this.btnLimpiar.TabIndex = 8;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(407, 472);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.dgvClientes);
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.txtDeuda);
@@ -146,7 +163,7 @@
             this.Controls.Add(this.lblCodigo);
             this.Name = "frmClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmClientes";
+            this.Text = "Clientes";
             this.Load += new System.EventHandler(this.frmClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.ResumeLayout(false);
@@ -167,5 +184,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }

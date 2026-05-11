@@ -39,5 +39,13 @@ namespace PryEDAgorioL
 
             }
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            clsArchivo x = new clsArchivo();
+            x.NomArchi = ("Colores.csv");
+            x.BorrarTodo();
+            lstColores.Items.Clear();
+        }
     }
 }

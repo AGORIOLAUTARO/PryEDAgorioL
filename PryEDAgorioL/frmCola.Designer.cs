@@ -80,6 +80,7 @@
             this.txtTramite.Name = "txtTramite";
             this.txtTramite.Size = new System.Drawing.Size(100, 20);
             this.txtTramite.TabIndex = 9;
+            this.txtTramite.TextChanged += new System.EventHandler(this.txtTramite_TextChanged);
             // 
             // txtNombre
             // 
@@ -87,6 +88,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 8;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // txtCodigo
             // 
@@ -284,7 +286,7 @@
             this.Controls.Add(this.gpbNuevoElemento);
             this.Name = "frmCola";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "-";
+            this.Text = "Cola";
             this.Load += new System.EventHandler(this.frmCola_Load);
             this.gpbNuevoElemento.ResumeLayout(false);
             this.gpbNuevoElemento.PerformLayout();

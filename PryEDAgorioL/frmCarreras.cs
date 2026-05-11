@@ -36,5 +36,28 @@ namespace PryEDAgorioL
 
 
         }
+
+        private void frmCarreras_Load(object sender, EventArgs e)
+        {
+            btnGrabar.Enabled = false;
+
+        }
+
+        private void txtCarreras_TextChanged(object sender, EventArgs e)
+        {
+            ValidarDatos();
+        }
+
+        private void ValidarDatos()
+        {
+            if (txtCarreras.Text != "")
+            {
+                btnGrabar.Enabled = true;
+            }
+            else
+            {
+                btnGrabar.Enabled = false;
+            }
+        }
     }
 }

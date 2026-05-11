@@ -26,5 +26,13 @@ namespace PryEDAgorioL
 
             txtMeses.Text = "";
         }
+
+        private void btnListarMeses_Click(object sender, EventArgs e)
+        {
+            clsArchivo x = new clsArchivo();
+            x.NomArchi = ("Meses.csv");
+            x.BorrarTodo();
+            lstMeses.Items.Clear();
+        }
     }
 }

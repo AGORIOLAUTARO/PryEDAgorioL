@@ -51,6 +51,7 @@
             this.txtCarreras.Name = "txtCarreras";
             this.txtCarreras.Size = new System.Drawing.Size(100, 20);
             this.txtCarreras.TabIndex = 1;
+            this.txtCarreras.TextChanged += new System.EventHandler(this.txtCarreras_TextChanged);
             // 
             // btnGrabar
             // 
@@ -94,7 +95,8 @@
             this.Controls.Add(this.lblCarrera);
             this.Name = "frmCarreras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmCarreras";
+            this.Text = "Carreras";
+            this.Load += new System.EventHandler(this.frmCarreras_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

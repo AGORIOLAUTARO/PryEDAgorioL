@@ -126,6 +126,7 @@
             // 
             // cmbListaDoble
             // 
+            this.cmbListaDoble.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbListaDoble.FormattingEnabled = true;
             this.cmbListaDoble.Location = new System.Drawing.Point(68, 30);
             this.cmbListaDoble.Name = "cmbListaDoble";
@@ -173,6 +174,7 @@
             this.txtTramite.Name = "txtTramite";
             this.txtTramite.Size = new System.Drawing.Size(100, 20);
             this.txtTramite.TabIndex = 9;
+            this.txtTramite.TextChanged += new System.EventHandler(this.txtTramite_TextChanged);
             // 
             // txtNombre
             // 
@@ -180,6 +182,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 8;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // txtCodigo
             // 
@@ -187,6 +190,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(100, 20);
             this.txtCodigo.TabIndex = 7;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // btnAgregar
             // 
@@ -282,7 +286,7 @@
             this.Controls.Add(this.gpbListaSimple);
             this.Name = "frmListaDoble";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmListaDoble";
+            this.Text = "ListaDoble";
             this.Load += new System.EventHandler(this.frmListaDoble_Load);
             this.gpbGrilla.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaDoble)).EndInit();
