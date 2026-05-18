@@ -16,5 +16,10 @@ namespace PryEDAgorioL
         {
             InitializeComponent();
         }
+
+        private void frmGrafo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

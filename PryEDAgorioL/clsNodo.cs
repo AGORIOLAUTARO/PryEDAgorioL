@@ -28,7 +28,7 @@ namespace PryEDAgorioL
             get { return Nom; }
             set { Nom = value; }
         }
-        
+
         public String Tramite
         {
             get { return Tra; }
@@ -46,7 +46,17 @@ namespace PryEDAgorioL
             get { return Ant; }
             set { Ant = value; }
         }
+
+        public clsNodo Izquierdo
+        {
+            get { return Ant; }
+            set { Ant = value; }
+        }
+        public clsNodo Derecho
+        {
+            get { return Sig; }
+            set { Sig = value; }
+        }
+
     }
-
 }
-
