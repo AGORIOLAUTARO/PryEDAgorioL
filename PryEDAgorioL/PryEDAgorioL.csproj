@@ -225,7 +225,7 @@
     <None Include="Resources\pila.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="frmConsultaTablas.cur" />
+    <None Include="Resources\Captura de pantalla 2026-05-17 225214.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
