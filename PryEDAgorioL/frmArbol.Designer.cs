@@ -83,11 +83,11 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dgvArbol.Location = new System.Drawing.Point(274, 19);
+            this.dgvArbol.Location = new System.Drawing.Point(253, 0);
             this.dgvArbol.Name = "dgvArbol";
             this.dgvArbol.RowHeadersVisible = false;
             this.dgvArbol.RowHeadersWidth = 51;
-            this.dgvArbol.Size = new System.Drawing.Size(285, 170);
+            this.dgvArbol.Size = new System.Drawing.Size(383, 182);
             this.dgvArbol.TabIndex = 21;
             // 
             // Column1
@@ -114,9 +114,10 @@
             // rbPostOrden
             // 
             this.rbPostOrden.AutoSize = true;
+            this.rbPostOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbPostOrden.Location = new System.Drawing.Point(37, 132);
             this.rbPostOrden.Name = "rbPostOrden";
-            this.rbPostOrden.Size = new System.Drawing.Size(78, 17);
+            this.rbPostOrden.Size = new System.Drawing.Size(103, 22);
             this.rbPostOrden.TabIndex = 2;
             this.rbPostOrden.TabStop = true;
             this.rbPostOrden.Text = "Post-Orden";
@@ -125,9 +126,10 @@
             // rbPreOrden
             // 
             this.rbPreOrden.AutoSize = true;
+            this.rbPreOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbPreOrden.Location = new System.Drawing.Point(37, 93);
             this.rbPreOrden.Name = "rbPreOrden";
-            this.rbPreOrden.Size = new System.Drawing.Size(73, 17);
+            this.rbPreOrden.Size = new System.Drawing.Size(95, 22);
             this.rbPreOrden.TabIndex = 1;
             this.rbPreOrden.TabStop = true;
             this.rbPreOrden.Text = "Pre-Orden";
@@ -136,9 +138,10 @@
             // rbInOrden
             // 
             this.rbInOrden.AutoSize = true;
+            this.rbInOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbInOrden.Location = new System.Drawing.Point(37, 52);
             this.rbInOrden.Name = "rbInOrden";
-            this.rbInOrden.Size = new System.Drawing.Size(66, 17);
+            this.rbInOrden.Size = new System.Drawing.Size(83, 22);
             this.rbInOrden.TabIndex = 0;
             this.rbInOrden.TabStop = true;
             this.rbInOrden.Text = "In-Orden";
@@ -183,9 +186,10 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(50, 140);
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Location = new System.Drawing.Point(46, 137);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(111, 23);
+            this.btnAgregar.Size = new System.Drawing.Size(116, 30);
             this.btnAgregar.TabIndex = 6;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -241,9 +245,10 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(34, 63);
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(34, 66);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(120, 23);
+            this.btnEliminar.Size = new System.Drawing.Size(131, 33);
             this.btnEliminar.TabIndex = 7;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -259,6 +264,7 @@
             // 
             // btnEqulibrar
             // 
+            this.btnEqulibrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEqulibrar.Location = new System.Drawing.Point(503, 162);
             this.btnEqulibrar.Name = "btnEqulibrar";
             this.btnEqulibrar.Size = new System.Drawing.Size(120, 39);

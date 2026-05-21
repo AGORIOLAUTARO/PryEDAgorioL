@@ -30,21 +30,21 @@ namespace PryEDAgorioL
                 while (Aux != null)
                 {
                     P = Aux;
-                    if(Nvo.Codigo < Aux.Codigo) Aux = Aux.Izquierdo;
+                    if (Nvo.Codigo < Aux.Codigo) Aux = Aux.Izquierdo;
                     else Aux = Aux.Derecho;
 
                 }
                 if (Nvo.Codigo < P.Codigo) P.Izquierdo = Nvo;
                 else P.Derecho = Nvo;
             }
-        } 
-        public void Recorrer (DataGridView Grilla)
+        }
+        public void Recorrer(DataGridView Grilla)
         {
             Grilla.Rows.Clear();
             InOrdenAsc(Grilla, Raiz);
         }
 
-        private void InOrdenAsc (DataGridView Dgv, clsNodo R)
+        private void InOrdenAsc(DataGridView Dgv, clsNodo R)
         {
             if (R.Izquierdo != null) InOrdenAsc(Dgv, R.Izquierdo);
             Dgv.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
@@ -52,18 +52,45 @@ namespace PryEDAgorioL
 
         }
 
-        public void Recorrer (ComboBox Lista)
+        public void Recorrer(ComboBox Lista)
         {
             Lista.Items.Clear();
             InOrdenAsc(Lista, Raiz);
 
         }
 
-        private void InOrdenAsc (ComboBox cmb, clsNodo R)
+        private void InOrdenAsc(ComboBox cmb, clsNodo R)
         {
             if (R.Izquierdo != null) InOrdenAsc(cmb, R.Izquierdo);
             cmb.Items.Add(R.Codigo);
             if (R.Derecho != null) InOrdenAsc(cmb, R.Derecho);
+        }
+
+        public void Recorrer(TreeView tree)
+        {
+            tree.Nodes.Clear();
+            TreeNode NodoPadre = new TreeNode("Arbol");
+            tree.Nodes.Add(NodoPadre);
+            PreOrden(Raiz, NodoPadre);
+            tree.ExpandAll();
+        }
+
+        private void PreOrden(clsNodo R, TreeNode nodoTreeView)
+        { TreeNode NodoPadre = new TreeNode(R.Codigo.ToString());
+            nodoTreeView.Nodes.Add(NodoPadre);
+            if (R.Izquierdo != null)
+            {
+                PreOrden(R.Izquierdo, NodoPadre);
+            }
+            if (R.Derecho != null)
+            {
+                PreOrden(R.Derecho, NodoPadre);
+
+            }
+
+
+
+
         }
 
     }

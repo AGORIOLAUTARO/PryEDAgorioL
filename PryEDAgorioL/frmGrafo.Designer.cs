@@ -89,7 +89,7 @@
             // txtPrecio
             // 
             this.txtPrecio.Location = new System.Drawing.Point(68, 104);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(76, 20);
             this.txtPrecio.TabIndex = 13;
@@ -124,6 +124,7 @@
             // 
             // btnBorrar
             // 
+            this.btnBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrar.Location = new System.Drawing.Point(125, 136);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(101, 27);
@@ -142,6 +143,7 @@
             // 
             // btnConsultar
             // 
+            this.btnConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultar.Location = new System.Drawing.Point(13, 136);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(98, 27);
@@ -162,7 +164,7 @@
             // 
             this.pictureBox1.Image = global::PryEDAgorioL.Properties.Resources.Captura_de_pantalla_2026_05_17_225214;
             this.pictureBox1.Location = new System.Drawing.Point(28, 22);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(214, 181);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -189,7 +191,7 @@
             // txtPrecioDatos
             // 
             this.txtPrecioDatos.Location = new System.Drawing.Point(68, 104);
-            this.txtPrecioDatos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPrecioDatos.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrecioDatos.Name = "txtPrecioDatos";
             this.txtPrecioDatos.Size = new System.Drawing.Size(76, 20);
             this.txtPrecioDatos.TabIndex = 13;
@@ -224,6 +226,7 @@
             // 
             // btnBorrarDatos
             // 
+            this.btnBorrarDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrarDatos.Location = new System.Drawing.Point(125, 136);
             this.btnBorrarDatos.Name = "btnBorrarDatos";
             this.btnBorrarDatos.Size = new System.Drawing.Size(101, 27);
@@ -242,6 +245,7 @@
             // 
             // btnConsultarDatos
             // 
+            this.btnConsultarDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarDatos.Location = new System.Drawing.Point(13, 136);
             this.btnConsultarDatos.Name = "btnConsultarDatos";
             this.btnConsultarDatos.Size = new System.Drawing.Size(98, 27);
@@ -268,11 +272,11 @@
             this.gpbListarViajes.Controls.Add(this.btnListarDestinos);
             this.gpbListarViajes.Controls.Add(this.cmbDesde);
             this.gpbListarViajes.Controls.Add(this.lblDesde);
-            this.gpbListarViajes.Location = new System.Drawing.Point(28, 208);
-            this.gpbListarViajes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpbListarViajes.Location = new System.Drawing.Point(11, 208);
+            this.gpbListarViajes.Margin = new System.Windows.Forms.Padding(2);
             this.gpbListarViajes.Name = "gpbListarViajes";
-            this.gpbListarViajes.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.gpbListarViajes.Size = new System.Drawing.Size(732, 240);
+            this.gpbListarViajes.Padding = new System.Windows.Forms.Padding(2);
+            this.gpbListarViajes.Size = new System.Drawing.Size(768, 240);
             this.gpbListarViajes.TabIndex = 24;
             this.gpbListarViajes.TabStop = false;
             this.gpbListarViajes.Text = "Listar Viajes";
@@ -287,13 +291,13 @@
             this.Column4,
             this.Column5,
             this.Column6});
-            this.dgvViajes.Location = new System.Drawing.Point(38, 59);
-            this.dgvViajes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvViajes.Location = new System.Drawing.Point(4, 58);
+            this.dgvViajes.Margin = new System.Windows.Forms.Padding(2);
             this.dgvViajes.Name = "dgvViajes";
             this.dgvViajes.RowHeadersVisible = false;
             this.dgvViajes.RowHeadersWidth = 51;
             this.dgvViajes.RowTemplate.Height = 24;
-            this.dgvViajes.Size = new System.Drawing.Size(568, 173);
+            this.dgvViajes.Size = new System.Drawing.Size(760, 173);
             this.dgvViajes.TabIndex = 7;
             // 
             // Column1
@@ -340,20 +344,22 @@
             // 
             // btnVerViajes
             // 
-            this.btnVerViajes.Location = new System.Drawing.Point(499, 21);
-            this.btnVerViajes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVerViajes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerViajes.Location = new System.Drawing.Point(506, 17);
+            this.btnVerViajes.Margin = new System.Windows.Forms.Padding(2);
             this.btnVerViajes.Name = "btnVerViajes";
-            this.btnVerViajes.Size = new System.Drawing.Size(118, 24);
+            this.btnVerViajes.Size = new System.Drawing.Size(166, 34);
             this.btnVerViajes.TabIndex = 6;
             this.btnVerViajes.Text = "Ver todos los viajes";
             this.btnVerViajes.UseVisualStyleBackColor = true;
             // 
             // btnListarOrigenes
             // 
-            this.btnListarOrigenes.Location = new System.Drawing.Point(382, 17);
-            this.btnListarOrigenes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnListarOrigenes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarOrigenes.Location = new System.Drawing.Point(380, 19);
+            this.btnListarOrigenes.Margin = new System.Windows.Forms.Padding(2);
             this.btnListarOrigenes.Name = "btnListarOrigenes";
-            this.btnListarOrigenes.Size = new System.Drawing.Size(82, 28);
+            this.btnListarOrigenes.Size = new System.Drawing.Size(84, 30);
             this.btnListarOrigenes.TabIndex = 5;
             this.btnListarOrigenes.Text = "Listar Origenes";
             this.btnListarOrigenes.UseVisualStyleBackColor = true;
@@ -362,7 +368,7 @@
             // 
             this.cmbHasta.FormattingEnabled = true;
             this.cmbHasta.Location = new System.Drawing.Point(284, 23);
-            this.cmbHasta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbHasta.Margin = new System.Windows.Forms.Padding(2);
             this.cmbHasta.Name = "cmbHasta";
             this.cmbHasta.Size = new System.Drawing.Size(92, 21);
             this.cmbHasta.TabIndex = 4;
@@ -370,19 +376,21 @@
             // lblHasta
             // 
             this.lblHasta.AutoSize = true;
-            this.lblHasta.Location = new System.Drawing.Point(248, 27);
+            this.lblHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHasta.Location = new System.Drawing.Point(233, 25);
             this.lblHasta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHasta.Name = "lblHasta";
-            this.lblHasta.Size = new System.Drawing.Size(35, 13);
+            this.lblHasta.Size = new System.Drawing.Size(47, 18);
             this.lblHasta.TabIndex = 3;
             this.lblHasta.Text = "Hasta";
             // 
             // btnListarDestinos
             // 
+            this.btnListarDestinos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListarDestinos.Location = new System.Drawing.Point(149, 20);
-            this.btnListarDestinos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnListarDestinos.Margin = new System.Windows.Forms.Padding(2);
             this.btnListarDestinos.Name = "btnListarDestinos";
-            this.btnListarDestinos.Size = new System.Drawing.Size(82, 25);
+            this.btnListarDestinos.Size = new System.Drawing.Size(82, 31);
             this.btnListarDestinos.TabIndex = 2;
             this.btnListarDestinos.Text = "Listar Destinos";
             this.btnListarDestinos.UseVisualStyleBackColor = true;
@@ -390,8 +398,8 @@
             // cmbDesde
             // 
             this.cmbDesde.FormattingEnabled = true;
-            this.cmbDesde.Location = new System.Drawing.Point(54, 23);
-            this.cmbDesde.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbDesde.Location = new System.Drawing.Point(53, 23);
+            this.cmbDesde.Margin = new System.Windows.Forms.Padding(2);
             this.cmbDesde.Name = "cmbDesde";
             this.cmbDesde.Size = new System.Drawing.Size(92, 21);
             this.cmbDesde.TabIndex = 1;
@@ -399,10 +407,11 @@
             // lblDesde
             // 
             this.lblDesde.AutoSize = true;
-            this.lblDesde.Location = new System.Drawing.Point(14, 25);
+            this.lblDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesde.Location = new System.Drawing.Point(0, 25);
             this.lblDesde.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDesde.Name = "lblDesde";
-            this.lblDesde.Size = new System.Drawing.Size(38, 13);
+            this.lblDesde.Size = new System.Drawing.Size(51, 18);
             this.lblDesde.TabIndex = 0;
             this.lblDesde.Text = "Desde";
             // 
