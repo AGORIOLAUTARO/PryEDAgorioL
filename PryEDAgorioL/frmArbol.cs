@@ -47,9 +47,48 @@ namespace PryEDAgorioL
             objArbol.Recorrer(dgvArbol);
             objArbol.Recorrer(cmbArbol);
 
+            int cantidadNodos = dgvArbol.Rows.Count;
+            clsNodo[] VectorDeNodos = new clsNodo[cantidadNodos];
+
+            objArbol.Recorrer(VectorDeNodos);
+
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtTramite.Text = "";
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+            Validar();
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            Validar();
+        }
+
+        private void txtTramite_TextChanged(object sender, EventArgs e)
+        {
+            Validar();
+
+        }
+
+        private void rbInOrden_CheckedChanged(object sender, EventArgs e)
+        {
+            clsNodo x = new clsNodo();
+            if (rbInOrden.Checked) objArbol.Recorrer(dgvArbol);
+        }
+
+        private void rbPreOrden_CheckedChanged(object sender, EventArgs e)
+        {
+            clsNodo x = new clsNodo();
+            if(rbPreOrden.Checked) objArbol.RecorrerPreOrden(dgvArbol);
+        }
+
+        private void rbPostOrden_CheckedChanged(object sender, EventArgs e)
+        {
+            clsNodo x = new clsNodo();
+            if (rbPostOrden.Checked)objArbol.RecorrerPostOrden(dgvArbol);
         }
     }
 }

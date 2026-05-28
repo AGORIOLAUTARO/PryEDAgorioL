@@ -89,7 +89,55 @@ namespace PryEDAgorioL
             }
 
 
+        }
 
+        private void InOrdenAsc(clsNodo[] vec, ref int ind, clsNodo R)
+        {
+
+            if (R.Izquierdo !=null) InOrdenAsc(vec,ref ind, R.Izquierdo);
+            vec[ind] = R;
+            ind++;
+            if (R.Derecho!=null) InOrdenAsc(vec,ref ind,R.Derecho);
+        }
+        public void Recorrer(clsNodo[] vector)
+        {
+            int ind = 0;
+            if(Raiz != null)
+            {
+                InOrdenAsc(vector,ref ind,Raiz);
+            }
+        }
+        public void RecorrerPreOrden (DataGridView Grilla)
+        {
+            Grilla.Rows.Clear();
+            PreOrden(Grilla, Raiz);
+
+
+        }
+        private void PreOrden(DataGridView grilla, clsNodo R)
+        {
+
+            if(R != null)
+            {
+                grilla.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
+                PreOrden(grilla, R.Izquierdo);
+                PreOrden(grilla,R.Derecho);
+
+            }
+        }
+        public void RecorrerPostOrden (DataGridView Grilla)
+        {
+            Grilla.Rows.Clear();
+            PostOrden(Grilla, Raiz);
+        }
+        private void PostOrden (DataGridView grilla, clsNodo R)
+        {
+            if (R != null)
+            {
+                PostOrden(grilla, R.Izquierdo);
+                PostOrden(grilla, R.Derecho);
+                grilla.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
+            }
 
         }
 
