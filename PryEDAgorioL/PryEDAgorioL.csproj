@@ -95,6 +95,24 @@
     <Compile Include="frmColores.Designer.cs">
       <DependentUpon>frmColores.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConsultaBaseDeDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaBaseDeDatos.Designer.cs">
+      <DependentUpon>frmConsultaBaseDeDatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultasVariasOP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultasVariasOP.Designer.cs">
+      <DependentUpon>frmConsultasVariasOP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaTabla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaTabla.Designer.cs">
+      <DependentUpon>frmConsultaTabla.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDatosdelDesarrollador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +143,12 @@
     <Compile Include="frmMeses.Designer.cs">
       <DependentUpon>frmMeses.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmOperacionesBaseDeDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOperacionesBaseDeDatos.Designer.cs">
+      <DependentUpon>frmOperacionesBaseDeDatos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPila.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +178,15 @@
     <EmbeddedResource Include="frmColores.resx">
       <DependentUpon>frmColores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaBaseDeDatos.resx">
+      <DependentUpon>frmConsultaBaseDeDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultasVariasOP.resx">
+      <DependentUpon>frmConsultasVariasOP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaTabla.resx">
+      <DependentUpon>frmConsultaTabla.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDatosdelDesarrollador.resx">
       <DependentUpon>FrmDatosdelDesarrollador.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMeses.resx">
       <DependentUpon>frmMeses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOperacionesBaseDeDatos.resx">
+      <DependentUpon>frmOperacionesBaseDeDatos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPila.resx">
       <DependentUpon>frmPila.cs</DependentUpon>

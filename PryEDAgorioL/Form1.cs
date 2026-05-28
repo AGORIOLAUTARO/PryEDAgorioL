@@ -100,5 +100,30 @@ namespace PryEDAgorioL
            frmGrafo vent = new frmGrafo();
             vent.ShowDialog();
         }
+
+        private void consultaDeUnaTablaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaTabla vent = new frmConsultaTabla();
+            vent.ShowDialog();
+        }
+
+        private void consultaDeBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaBaseDeDatos vent = new frmConsultaBaseDeDatos();
+            vent.ShowDialog();
+        }
+
+        private void operacionesEnBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmOperacionesBaseDeDatos vent = new frmOperacionesBaseDeDatos();
+            vent.ShowDialog();
+        }
+
+        private void consultasVariasConOperacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultasVariasOP vent = new frmConsultasVariasOP();
+            vent.ShowDialog();
+
+        }
     }
 }
