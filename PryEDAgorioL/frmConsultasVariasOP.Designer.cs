@@ -40,21 +40,19 @@
             // 
             this.lblDatos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDatos.Location = new System.Drawing.Point(67, 74);
-            this.lblDatos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDatos.Location = new System.Drawing.Point(50, 60);
             this.lblDatos.Name = "lblDatos";
-            this.lblDatos.Size = new System.Drawing.Size(816, 132);
+            this.lblDatos.Size = new System.Drawing.Size(612, 107);
             this.lblDatos.TabIndex = 25;
             // 
             // dgvRepaso
             // 
             this.dgvRepaso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRepaso.Location = new System.Drawing.Point(67, 226);
-            this.dgvRepaso.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvRepaso.Location = new System.Drawing.Point(50, 184);
             this.dgvRepaso.Name = "dgvRepaso";
             this.dgvRepaso.RowHeadersVisible = false;
             this.dgvRepaso.RowHeadersWidth = 51;
-            this.dgvRepaso.Size = new System.Drawing.Size(816, 303);
+            this.dgvRepaso.Size = new System.Drawing.Size(612, 246);
             this.dgvRepaso.TabIndex = 24;
             // 
             // cmbTabla
@@ -62,45 +60,44 @@
             this.cmbTabla.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTabla.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTabla.FormattingEnabled = true;
-            this.cmbTabla.Location = new System.Drawing.Point(460, 22);
-            this.cmbTabla.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbTabla.Location = new System.Drawing.Point(345, 18);
             this.cmbTabla.Name = "cmbTabla";
-            this.cmbTabla.Size = new System.Drawing.Size(282, 28);
+            this.cmbTabla.Size = new System.Drawing.Size(212, 25);
             this.cmbTabla.TabIndex = 23;
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(67, 21);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo.Location = new System.Drawing.Point(50, 17);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(368, 25);
+            this.lblTitulo.Size = new System.Drawing.Size(297, 20);
             this.lblTitulo.TabIndex = 21;
             this.lblTitulo.Text = "Operación a realizar en la base de datos:";
             // 
             // btnListarConsultasBD
             // 
             this.btnListarConsultasBD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarConsultasBD.Location = new System.Drawing.Point(778, 18);
-            this.btnListarConsultasBD.Margin = new System.Windows.Forms.Padding(4);
+            this.btnListarConsultasBD.Location = new System.Drawing.Point(584, 15);
             this.btnListarConsultasBD.Name = "btnListarConsultasBD";
-            this.btnListarConsultasBD.Size = new System.Drawing.Size(105, 34);
+            this.btnListarConsultasBD.Size = new System.Drawing.Size(79, 28);
             this.btnListarConsultasBD.TabIndex = 22;
             this.btnListarConsultasBD.Text = "Listar";
             this.btnListarConsultasBD.UseVisualStyleBackColor = true;
             // 
             // frmConsultasVariasOP
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 546);
+            this.ClientSize = new System.Drawing.Size(686, 444);
             this.Controls.Add(this.lblDatos);
             this.Controls.Add(this.dgvRepaso);
             this.Controls.Add(this.cmbTabla);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnListarConsultasBD);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmConsultasVariasOP";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmConsultasVariasOP";
             ((System.ComponentModel.ISupportInitialize)(this.dgvRepaso)).EndInit();
             this.ResumeLayout(false);

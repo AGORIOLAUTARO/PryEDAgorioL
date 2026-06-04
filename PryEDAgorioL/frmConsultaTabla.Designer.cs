@@ -90,8 +90,9 @@
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.dgvTablaBD);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmConsultaTabla";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmConsultaTabla";
             this.Load += new System.EventHandler(this.frmConsultaTabla_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTablaBD)).EndInit();

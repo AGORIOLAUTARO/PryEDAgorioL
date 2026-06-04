@@ -68,6 +68,7 @@
             this.btnDiferencia.TabIndex = 10;
             this.btnDiferencia.Text = "Diferencia";
             this.btnDiferencia.UseVisualStyleBackColor = true;
+            this.btnDiferencia.Click += new System.EventHandler(this.btnDiferencia_Click);
             // 
             // btnInterseccion
             // 
@@ -78,6 +79,7 @@
             this.btnInterseccion.TabIndex = 9;
             this.btnInterseccion.Text = "Intersección";
             this.btnInterseccion.UseVisualStyleBackColor = true;
+            this.btnInterseccion.Click += new System.EventHandler(this.btnInterseccion_Click);
             // 
             // btnUnion
             // 
@@ -88,6 +90,7 @@
             this.btnUnion.TabIndex = 6;
             this.btnUnion.Text = "Unión";
             this.btnUnion.UseVisualStyleBackColor = true;
+            this.btnUnion.Click += new System.EventHandler(this.btnUnion_Click);
             // 
             // groupBox1
             // 
@@ -196,8 +199,9 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbEliminado);
             this.Controls.Add(this.dgvOperaciones);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmOperacionesBaseDeDatos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmOperacionesBaseDeDatos";
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);

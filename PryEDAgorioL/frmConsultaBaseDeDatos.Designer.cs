@@ -60,7 +60,7 @@
             // txtSQL
             // 
             this.txtSQL.Location = new System.Drawing.Point(44, 33);
-            this.txtSQL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSQL.Margin = new System.Windows.Forms.Padding(2);
             this.txtSQL.Multiline = true;
             this.txtSQL.Name = "txtSQL";
             this.txtSQL.Size = new System.Drawing.Size(613, 137);
@@ -96,9 +96,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvCtaSql);
             this.Controls.Add(this.lblConsulta);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmConsultaBaseDeDatos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmConsultaBaseDeDatos";
+            this.Load += new System.EventHandler(this.frmConsultaBaseDeDatos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCtaSql)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

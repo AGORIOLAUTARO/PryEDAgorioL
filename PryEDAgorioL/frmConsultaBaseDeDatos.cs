@@ -22,5 +22,10 @@ namespace PryEDAgorioL
             clsBaseDatos objBaseDatos = new clsBaseDatos();
             objBaseDatos.Listar(dgvCtaSql, txtSQL.Text);
         }
+
+        private void frmConsultaBaseDeDatos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

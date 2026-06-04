@@ -48,5 +48,37 @@ namespace PryEDAgorioL
                 "WHERE IDPAIS = 2 ";
             objBaseDatos.Listar(dgvOperaciones, varSQL);
         }
+
+        private void btnInterseccion_Click(object sender, EventArgs e)
+        {
+            String varSQL = "Select * from libro " +
+                " where idIdioma = 2 and " +
+                "idLibro in " +
+                " (select idLibro from libro where idPais = 3)" +
+                " order by 1 asc ";
+            objBaseDatos.Listar(dgvOperaciones, varSQL);
+        }
+
+        private void btnDiferencia_Click(object sender, EventArgs e)
+        {
+            String varSQL = "Select * from libro " +
+                " where idIdioma = 2 and " +
+                "idLibro not in " +
+                " (Select idLibro from libro where idPais = 3)" +
+                " order by 1 asc ";
+            objBaseDatos.Listar(dgvOperaciones, varSQL);
+        }
+
+        private void btnUnion_Click(object sender, EventArgs e)
+        {
+            String varSQL = "SELECT * " +
+                "FROM LIBRO " +
+                "WHERE IDIDIOMA = 1 " +
+                "UNION " +
+                "SELECT * " +
+                "FROM LIBRO " +
+                "WHERE IDIDIOMA = 2 ";
+            objBaseDatos.Listar(dgvOperaciones, varSQL);
+        }
     }
 }
