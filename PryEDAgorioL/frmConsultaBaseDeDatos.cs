@@ -16,5 +16,11 @@ namespace PryEDAgorioL
         {
             InitializeComponent();
         }
+
+        private void btnListarSQL_Click(object sender, EventArgs e)
+        {
+            clsBaseDatos objBaseDatos = new clsBaseDatos();
+            objBaseDatos.Listar(dgvCtaSql, txtSQL.Text);
+        }
     }
 }
