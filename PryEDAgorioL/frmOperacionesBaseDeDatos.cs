@@ -80,5 +80,28 @@ namespace PryEDAgorioL
                 "WHERE IDIDIOMA = 2 ";
             objBaseDatos.Listar(dgvOperaciones, varSQL);
         }
+
+        private void frmOperacionesBaseDeDatos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSelSimple_Click(object sender, EventArgs e)
+        {
+            String varSql = "SELECT TITULO " +
+              "FROM LIBRO " +
+              "WHERE  IDPAIS = 3 ";
+            objBaseDatos.Listar(varSql,dgvOperaciones);
+        }
+
+        private void btnSelMultiAtributo_Click(object sender, EventArgs e)
+        {
+
+            String varSql = "SELECT TITULO, PRECIO " +
+                "FROM LIBRO " +
+                "WHERE PRECIO > 400 " +
+                "ORDER BY 1 DESC";
+            objBaseDatos.Listar(varSql,dgvOperaciones);
+        }
     }
 }

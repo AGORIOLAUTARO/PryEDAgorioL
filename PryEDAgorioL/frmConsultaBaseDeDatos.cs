@@ -25,7 +25,13 @@ namespace PryEDAgorioL
 
         private void frmConsultaBaseDeDatos_Load(object sender, EventArgs e)
         {
+            btnListarSQL.Enabled = false;
+        }
 
+        private void txtSQL_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSQL.Text != "") btnListarSQL.Enabled = true;
+            else btnListarSQL.Enabled = false;
         }
     }
 }

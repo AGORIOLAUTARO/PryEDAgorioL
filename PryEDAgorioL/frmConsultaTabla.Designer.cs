@@ -45,27 +45,31 @@
             "Idioma",
             "Libro",
             "Pais"});
-            this.cmbTabla.Location = new System.Drawing.Point(376, 312);
+            this.cmbTabla.Location = new System.Drawing.Point(501, 384);
+            this.cmbTabla.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbTabla.Name = "cmbTabla";
-            this.cmbTabla.Size = new System.Drawing.Size(146, 25);
+            this.cmbTabla.Size = new System.Drawing.Size(193, 28);
             this.cmbTabla.TabIndex = 14;
+            this.cmbTabla.SelectedIndexChanged += new System.EventHandler(this.cmbTabla_SelectedIndexChanged);
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(188, 312);
+            this.lblTitulo.Location = new System.Drawing.Point(251, 384);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(195, 20);
+            this.lblTitulo.Size = new System.Drawing.Size(243, 25);
             this.lblTitulo.TabIndex = 12;
             this.lblTitulo.Text = "Tabla de la base de datos:";
             // 
             // btnListar
             // 
             this.btnListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListar.Location = new System.Drawing.Point(527, 309);
+            this.btnListar.Location = new System.Drawing.Point(703, 380);
+            this.btnListar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(118, 33);
+            this.btnListar.Size = new System.Drawing.Size(157, 41);
             this.btnListar.TabIndex = 13;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
@@ -74,23 +78,24 @@
             // dgvTablaBD
             // 
             this.dgvTablaBD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTablaBD.Location = new System.Drawing.Point(6, 28);
+            this.dgvTablaBD.Location = new System.Drawing.Point(8, 34);
+            this.dgvTablaBD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvTablaBD.Name = "dgvTablaBD";
             this.dgvTablaBD.RowHeadersVisible = false;
             this.dgvTablaBD.RowHeadersWidth = 51;
-            this.dgvTablaBD.Size = new System.Drawing.Size(648, 261);
+            this.dgvTablaBD.Size = new System.Drawing.Size(864, 321);
             this.dgvTablaBD.TabIndex = 11;
             // 
             // frmConsultaTabla
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(664, 378);
+            this.ClientSize = new System.Drawing.Size(885, 465);
             this.Controls.Add(this.cmbTabla);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.dgvTablaBD);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmConsultaTabla";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmConsultaTabla";

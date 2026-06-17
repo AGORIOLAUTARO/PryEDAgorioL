@@ -19,13 +19,19 @@ namespace PryEDAgorioL
 
         private void frmConsultaTabla_Load(object sender, EventArgs e)
         {
-
+            btnListar.Enabled = false;
         }
 
         private void btnListar_Click(object sender, EventArgs e)
         {
             clsBaseDatos bd = new clsBaseDatos();
             bd.Listar(cmbTabla.Text, dgvTablaBD);
+        }
+
+        private void cmbTabla_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbTabla.SelectedIndex != -1) btnListar.Enabled = true;
+            else btnListar.Enabled = false;
         }
     }
 }
